@@ -1,0 +1,25 @@
+package PriyaPractice;
+
+public class secondLargestArray {
+
+	public static void main(String args[]) {
+		int[] arr = { 12, 35, 1, 10, 34, 1, 50 };
+		int firstMax = Integer.MIN_VALUE;
+		int secondMax = Integer.MIN_VALUE;
+		int temp = 0;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] > arr[j]) {
+temp=arr[i];
+arr[i]=arr[j];
+arr[i]=temp;
+				}
+			}
+		}
+
+		System.out.println("a " + firstMax);
+		System.out.println("b " + secondMax);
+
+	}
+
+}

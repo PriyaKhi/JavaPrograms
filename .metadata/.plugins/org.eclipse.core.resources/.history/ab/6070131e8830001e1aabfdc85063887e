@@ -1,0 +1,45 @@
+package PriyaPractice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
+public class duplicatePrograms {
+
+	public static void main(String[] args) {
+//		removeDuplicatesFromArrayUsingHashSet();
+//		removeDuplicatesFromArray();
+
+		removeDuplicatesFromString();
+	}
+
+	public static void removeDuplicatesFromArrayUsingHashSet() {
+		int arr[] = { 10, 14, 14, 10, 55, 66, 55, 11, 66 };
+		HashSet<Integer> hs = new HashSet<>();
+		for (int i = 0; i < arr.length; i++) {
+			hs.add(arr[i]);
+		}
+		System.out.print(hs);
+	}
+
+	public static void removeDuplicatesFromArray() {
+		int arr[] = { 10, 14, 14, 10, 55, 66, 55, 11, 66 };
+		ArrayList<Integer> a = new ArrayList<Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			int count = 0;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] == arr[j]) {
+					count = 1;
+				}
+			}
+			if (count == 1) {
+				a.add(arr[i]);
+			}
+		}
+		System.out.println(Arrays.asList(a));
+	}
+	
+	public static void removeDuplicatesFromString() {
+		
+	}
+}

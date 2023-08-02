@@ -1,0 +1,32 @@
+package PriyaPractice;
+
+import java.util.Scanner;
+
+public class GeekForGeekNonRepeatingCharacter {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the String");
+		String c = sc.next();
+
+		c = c.replaceAll("//s", "");
+		char[] arr = c.toCharArray();
+
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			for (int k = 1; k < arr.length; k++) {
+				if (arr[i] == arr[k]) {
+					count = 1;
+					break;
+				} else {
+					count = 0;
+				}
+			}
+			if (count == 0) {
+				System.out.println(arr[i]);
+				System.exit(0);
+			} 
+		}
+		System.out.println("$");
+	}
+}

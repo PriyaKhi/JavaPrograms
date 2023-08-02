@@ -1,0 +1,39 @@
+package PriyaPractice;
+
+public class countPrograms {
+
+	public static void main(String[] args) {
+//		countNumberOf();
+
+		countNumberofWords();
+
+	}
+
+	public static void countNumberOf() {
+		String s = "Priya1Khiwal@%!%^!^!3";
+		int digCount = 0;
+		int alphaCount = 0;
+		int specialCount = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isDigit(s.charAt(i))) {
+				digCount++;
+			} else if (Character.isAlphabetic(s.charAt(i))) {
+				alphaCount++;
+			} else {
+				specialCount++;
+			}
+		}
+		System.out.println(digCount);
+		System.out.println(alphaCount);
+		System.out.println(specialCount);
+	}
+
+	public static void countNumberofWords() {
+		String s = "This is Priya Khiwal";
+		String[] arr = s.split(" ");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = arr[i].replaceAll("[^a-zA-Z0-9]", "");
+		}
+		System.out.println(arr.length);
+	}
+}

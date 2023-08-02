@@ -1,0 +1,30 @@
+package PriyaPractice;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class OccurenceOfCharacter {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the String");
+		String c = sc.next();
+
+		HashMap<Character, Integer> hm = new HashMap<>();
+		c = c.replaceAll("//s", "");
+
+		char[] arr = c.toCharArray();
+
+		for (Character k : arr) {
+			if (hm.containsKey(k)) {
+				hm.put(k, hm.get(k) + 1);
+			} else {
+				hm.put(k, 1);
+			}
+		}
+
+		System.out.println(Arrays.asList(hm));
+	}
+}

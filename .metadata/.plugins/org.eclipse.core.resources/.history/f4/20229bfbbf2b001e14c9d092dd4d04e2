@@ -1,0 +1,31 @@
+package Interview;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class NECInterview {
+
+	public static void main(String[] args) throws Exception {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the String");
+		String c = sc.next();
+
+		char[] n = c.replaceAll("//s", "").toCharArray();
+		if (!(Character.isAlphabetic(n[0]) && Character.isUpperCase(n[0]))) {
+			throw new Exception("First letter is not alphabet");
+		}
+		if (!(Character.isDigit(n[c.length() - 1]))) {
+			throw new Exception("Last letter is not a digit");
+		}
+		int count = 0;
+		Pattern p = Pattern.compile("[^a-zA-Z0-9]", Pattern.CASE_INSENSITIVE);
+		for (int i = 1; i < n.length - 1; i++) {
+			if (p.matcher(c).find()) {
+				count++;
+				
+			}
+		}
+		System.out.print("count of special character is " + count);
+	}
+}

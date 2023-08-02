@@ -1,0 +1,19 @@
+package PriyaPractice;
+
+import java.util.HashSet;
+
+public class duplicatePrograms {
+
+	public static void main(String[] args) {
+		removeDuplicatesFromArray();
+	}
+
+	public static void removeDuplicatesFromArray() {
+		int arr[] = { 10, 14, 14, 10, 55, 66, 55, 11, 66 };
+		HashSet<Integer> hs = new HashSet<>();
+		for (int i = 0; i < arr.length; i++) {
+			hs.add(arr[i]);
+		}
+
+	}
+}

@@ -1,0 +1,25 @@
+package PriyaPractice;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+	public static int reverseNum(int n) {
+		int val=0;
+		while(n>0) {
+			val= n%10*10;
+			n=n/10;
+		}
+		
+		
+		return n;
+
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		System.out.print("Reverse " + reverseNum(n));
+	}
+
+}

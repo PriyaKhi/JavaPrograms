@@ -1,0 +1,50 @@
+package PriyaPractice;
+
+import java.util.Scanner;
+
+// 153 = 1^3 + 5^3 + 3^3
+//8208 = 8^4 + 2^4 + 0^4 + 8^4
+
+public class ArmStrongNumber {
+
+	public static int asNumber(int n) {
+		int temp = 0;
+		int sum = 0;
+		int p = count(n);
+		while (n > 0) {
+			temp = n % 10;
+			sum += Math.pow(temp, p);
+			n = n / 10;
+		}
+		return sum;
+	}
+
+	public static int count(int n) {
+		int count = 0;
+		int temp = 0;
+		while (n > 0) {
+			temp = n % 10;
+			count++;
+			n = n / 10;
+		}
+		return count;
+	}
+
+	public boolean isArmStrong(int n, int sum) {
+		if (sum == n) {
+			System.out.print("Number is armstrong");
+		} else {
+			System.out.print("Number is not armstrong");
+		}
+
+	}
+
+	public static void main(String[] args) {
+		System.out.print("Enter a number");
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int sum = asNumber(n);
+		System.out.println(asNumber(n));
+		System.out.print(isArmStrong(n, sum));
+	}
+}

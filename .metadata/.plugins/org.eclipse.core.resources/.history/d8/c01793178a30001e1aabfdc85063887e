@@ -1,0 +1,13 @@
+package PriyaPractice;
+
+public class swapNumbers {
+
+	public static void swapNumbers() {
+		int a = 1;
+		int b = 2;
+
+		a = a + b; // 1+2=3
+		b = a - b; // 3-2=1
+		a = a - b; // 3-1
+	}
+}

@@ -1,0 +1,9 @@
+package Interview;
+
+public class secondLargestInArray {
+
+	
+	int arr[]= {4, 781, 8, 99, 103};
+	
+	
+}

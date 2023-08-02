@@ -1,0 +1,11 @@
+package Interview;
+
+public class secondLargestInArray {
+
+	public static void main(String []args) {
+	int arr[] = { 4, 781, 8, 99, 103 };
+
+	
+	for(int i=0;i<arr)
+	}
+}

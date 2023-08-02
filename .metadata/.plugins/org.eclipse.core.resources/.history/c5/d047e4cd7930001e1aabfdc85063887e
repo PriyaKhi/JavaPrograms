@@ -1,0 +1,13 @@
+package PriyaPractice;
+
+public class secondLargestArray {
+
+	public static void main(String args[]) {
+		int[] arr1 = { 10, 10, 20, 30, 40, 40, 50 };
+   int firstMax, secondMax=arr1[0];
+		for(int i=1;i<arr1.length;i++) {
+			
+			
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package PriyaPractice;
+
+public class duplicatePrograms {
+
+	public static void main(String[] args) {
+		removeDuplicatesFromArray();
+	}
+
+	public void removeDuplicatesFromArray() {
+
+	}
+}
